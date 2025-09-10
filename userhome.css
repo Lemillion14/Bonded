@@ -1,0 +1,200 @@
+:root {
+  --background-color: #e7e7e7;
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  --text-color: #000000;
+  --border-color: #000000;
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --upgrade-gradient: linear-gradient(142deg, #b5c6ff 0%, #d3a4ff 118.54%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.glass-effect {
+  background-color: var(--glass-bg);
+  border: 0.1px solid var(--border-color);
+  box-shadow: 0px 4px 4px 0px var(--shadow-color);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+/* CSS from section:header */
+.site-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 15px;
+  gap: 93px;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.upgrade-button {
+  display: inline-block;
+  padding: 6px 15px;
+  background: var(--upgrade-gradient);
+  border: 0.1px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--text-color);
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-icon-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 61px;
+  height: 50px;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.nav-icon-btn img {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.nav-icon-btn .profile-avatar {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header-container {
+    flex-direction: column;
+  }
+  .header-left {
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+/* CSS from section:main */
+.main-content {
+  flex-grow: 1;
+  display: grid;
+  place-items: center;
+  padding: 20px 0;
+  margin-bottom: 90px;
+}
+
+.profile-card-wrapper {
+  width: 350px;
+  height: 550px;
+}
+
+.profile-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.action-button {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px var(--shadow-color));
+}
+
+.action-button .button-bg {
+    
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+.action-button .button-icon {
+  position: absolute;
+  
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  max-width: 45%;
+  max-height: 45%;
+}
+
+@media (max-width: 480px) {
+  .profile-card-wrapper {
+    width: 90vw;
+    max-width: 320px;
+    height: 125vw;
+    max-height: 500px;
+  }
+  .action-buttons {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
