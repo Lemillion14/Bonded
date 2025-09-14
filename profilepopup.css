@@ -1,0 +1,114 @@
+:root {
+  --text-primary: #000000;
+  --text-danger: #ff4646;
+  --bg-main: rgba(255, 255, 255, 0.5);
+  --border-color: #EAEAEA;
+  --shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5; /* Added a background to see the component clearly */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to top for better viewing */
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* CSS from section:profile-dropdown */
+.profile-menu {
+    max-width: 140px;
+    width: 100%;
+    background-color: var(--bg-main);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    /* Vertical padding: 13px (from -2049 to -2036) */
+    /* Horizontal padding: 17px (from 5440 to 5457) */
+    /* Bottom padding: 15px (from -2036+28 to -1993) */
+    padding: 13px 16px 15px;
+    gap: 7px; /* Gap: 7px (from 5457+28 to 5492) */
+  }
+
+  .avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .user-details {
+    display: flex;
+    align-items: baseline;
+    gap: 2px; /* Gap: 2px (from 5492+40 to 5534) */
+    flex-wrap: wrap;
+  }
+
+  .user-name {
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19.5px;
+  }
+
+  .user-tag {
+    color: var(--text-primary);
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16.5px;
+  }
+
+  .menu-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-nav li {
+    border-top: 1px solid var(--border-color);
+  }
+
+  .menu-nav a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    /* Vertical padding: (33px frame height - 18px line height) / 2 = 7.5px */
+    padding: 7.5px 10px;
+    transition: background-color 0.2s ease;
+  }
+
+  .menu-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .menu-nav .logout-link {
+    color: var(--text-danger);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    body {
+      align-items: flex-start;
+      padding-top: 20px;
+    }
+  }
