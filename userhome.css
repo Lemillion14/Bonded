@@ -325,44 +325,45 @@ body {
   height: 30px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .profile-viewer {
-    height: 350px;
+@media (max-width: 1200px) {
+  .dashboard-card {
     flex-direction: column;
   }
-  
-  .profile-placeholder {
+  .sidebar {
     width: 100%;
-  }
-
-  .profile-placeholder.left {
-    border-radius: 10px 10px 0 0;
-  }
-
-  .profile-placeholder.right {
-    border-radius: 0 0 10px 10px;
+    border-radius: 15px 15px 0 0;
+    border-right: none;
+    border-bottom: 0.3px solid var(--color-text-primary);
   }
 }
 
-@media (max-width: 480px) {
+/* For tablets and large phones */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .header-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .header-nav{
+    justify-content: center;
+    gap: 50px;
+  }
   .profile-viewer {
-    height: 300px;
+    flex-direction: row;
   }
-  
-  .action-buttons {
-    gap: 30px;
-  }
-  
-  .action-button:nth-child(1),
-  .action-button:nth-child(4) {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .action-button:nth-child(2),
-  .action-button:nth-child(3) {
-    width: 60px;
-    height: 60px;
-  }
+  .profile-placeholder.left { border-radius: 10px 0px 0 10px; }
+  .profile-placeholder.right { border-radius: 0 10px 10px 0px; }
+}
+
+/* For small phones */
+@media (max-width: 480px) {
+  body { padding: 10px; }
+  .logo { font-size: 18px; }
+  .upgrade-button { font-size: 11px; padding: 5px 10px; }
+  .nav-button { width: 40px; height: 40px; }
+  .nav-button img { width: 20px; }
+  .action-button { width: 50px; height: 50px; }
 }
