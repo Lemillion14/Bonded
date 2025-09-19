@@ -1,0 +1,8 @@
+vendor/ 
+.idea/   # (optional, for PHPStorm)
+node_modules/  # (optional, for frontend)
+ 
+ 
+# Dependency directories 
+vendor/ 
+node_modules/ 
