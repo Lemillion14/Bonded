@@ -1,0 +1,30 @@
+{
+  "name": "home-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lemillion14/Bonded.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lemillion14/Bonded/issues"
+  },
+  "homepage": "https://github.com/Lemillion14/Bonded#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "jquery": "^3.7.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
+  }
+}
