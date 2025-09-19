@@ -7,7 +7,7 @@ if (session_status() == PHP_SESSION_NONE) {
 // Include translations
 include_once 'translations.php';
 ?>
-<?php include 'header.php'; ?>
+<?php include 'HomePageHeader.php'; ?>
 
 <!-- Hero Section -->
 <section id="hero" class="hero-section">
@@ -87,4 +87,4 @@ include_once 'translations.php';
     </div>
 </section>
 
-<?php include 'footer.php'; ?>
+<?php include 'HomePageFooter.php'; ?>
